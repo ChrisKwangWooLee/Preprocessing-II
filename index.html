@@ -15,11 +15,29 @@
 </head>
 
 <body>
-
+<header>
+    <div class="logo">
+      <h1>Fun Bus</h1>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+</header>
   
      
   <div class="container home">
-   
+    <section class="banner">
+      <img src="./img/fun-bus.jpg" alt="">
+
+      <div class="banner-text">
+        <h2>Welcome To Fun Bus!</h2>
+        <p>Traveleling expedition modern, clean webdesign blogger clean website theme website modern. Design pretty design, travelblogger adventure WordPress wanderlust theme blogger website expedition theme travelblogger. Adventure fun traveler pretty design website expedition.</p>
+      </div>
+    </section>
+
     <section class="content-section">
       <div class="text-content">
         <h2>Let's Go!</h2>
@@ -46,8 +64,8 @@
       <p>Expedition excursion design darn excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
       <img src="img/destination.jpg" alt="Second slide">
     </section>
-    <section class="content-pick">
 
+    <section class="content-pick">
       <div class="destination">
         <h4>Fun In The Sun</h4>
         <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
@@ -64,6 +82,42 @@
         <div class="btn">Sign Me Up!</div>
       </div>
     </section>
+
+    <form class="select-signup-form">
+        <h3>Select & Sign Up</h3>
+        <div class="form-select">
+          <label for="funInTheSun">Fun In The Sun</label>
+          <input type="checkbox" name="vacation_package" id="funInTheSun" value="funInTheSun">
+          <label for="mountainExcursion">Mountain Excursion</label>
+          <input type="checkbox" name="vacation_package" id="mountainExcursion" value="mountainExcursion">
+          <label for="islandGetaway">Island Getaway</label>
+          <input type="checkbox" name="vacation_package" id="islandGetaway" value="islandGetaway">
+        </div>
+        <div class="userInfo">
+          <div class="userInfo-inputs">
+            <label for="Name"></label>
+            <input type="text" name="Name" id="Name" placeholder="Name">
+          </div>
+    
+          <div class="userInfo-inputs">
+            <label for="Email"></label>
+            <input type="email" name="Email" id="Email" placeholder="Email">
+          </div>
+    
+          <div class="userInfo-inputs">
+            <label for="phoneNumber"></label>
+            <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone Number">
+          </div>
+         
+          <div class="userInfo-inputs">
+            <label for="specialInstructions"></label>
+            <input class="special" type="text" name="specialInstructions" id="specialInstructions" placeholder="Speical instructions">
+          </div>
+    
+        </div>
+    
+      </form>
+      
   </div><!-- container -->
 
   <footer class="footer">

@@ -1,1 +1,53 @@
 // Navigation Styles here
+header {
+    border-bottom: 2px dashed @silver;
+    .displayFlex(row, space-between);
+
+    @media @mobile {
+        .displayFlex(column, space-evenly);       
+    }
+    .logo {
+        width: 28%;
+        padding: 2% 0;
+        text-align: center;
+
+        @media @mobile {
+            width: 100%;  
+            margin: 2%; 
+        }
+    }
+
+    nav {
+        width: 45%;
+        padding-right: 5%;
+        .displayFlex(row, space-evenly);
+        align-items: center;
+
+        @media @mobile {
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: @font-color;
+            font-size: 1.4rem;
+            padding: 2%;
+
+            &:hover {
+                animation-name: colorChange;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes colorChange {
+                from {.navAnimationsSet(black, 0, 0, white, 10px)}
+                to {.navAnimationsSet(white, 2%, 5%, maroon, 10px)}
+            }
+
+            @media @mobile {
+                font-size: 2rem;
+                margin-bottom: 3%;
+            }
+        } // close a
+    } // close nav
+} // close header
