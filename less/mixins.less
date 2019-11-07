@@ -1,1 +1,28 @@
 // Mixins in here
+.displayFlex(@fd, @jc){
+    display: flex;
+    flex-direction: @fd;
+    justify-content: @jc;
+}
+
+.buttonStyle(@fontSize, @borderRadius, @text-align, @paddingTopBot) {
+    font-size: @fontSize;  //1.5rem
+    width: 100%;
+    border-radius: @borderRadius; //10px
+    text-align: @text-align; //center
+    padding: @paddingTopBot 0; //5%
+    background: @button-bg;
+}
+
+.navAnimation(@AniName, @duration, @fillMode) {
+    animation-name: @AniName;
+    animation-duration: @duration;  //1s
+    animation-fill-mode: @fillMode; //forwards
+}
+
+.navAnimationsSet(@color, @padTB, @padLR, @bgColor, @borderRadius) {
+    color: @color; //black
+    padding: @padTB @padLR; // 0 0
+    background: @bgColor; // white
+    border-radius: @borderRadius; // 10px
+}

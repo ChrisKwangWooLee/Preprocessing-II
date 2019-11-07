@@ -6,11 +6,20 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    @media @mobile {
+      flex-direction: column;
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile{
+        width: 100%;
+        p {
+          font-size: 1.5rem;
+        }
+      }
     }
 
     .img-content {
@@ -20,6 +29,11 @@
       img {
         border-radius: 10px;
       }
+
+      @media @mobile {
+        width: 100%;
+        padding-left:0;
+      }
     }
   }
 
@@ -27,6 +41,10 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+
+    @media @mobile {
+      .displayFlex(column-reverse, space-betnwee);
+    }
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -42,6 +60,12 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 4%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -56,6 +80,90 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 100%;
+        padding: 0 10%;
+      }
     }
   }
 }// home
+
+.container .banner {
+  .displayFlex(column, flex-start);
+
+  .banner-text {
+      padding: 2% 0 5% 0;
+      border-bottom: 2px dashed @silver;
+  }
+}
+
+//Buttons
+.content-pick {
+  @media @mobile {
+    .displayFlex(row, spaced-between);
+    flex-wrap: wrap;
+  }
+  .destination {
+    .btn {
+        .buttonStyle(1.5rem, 10px, center, 5%);
+        width: 100%;
+        background: @button-bg;
+        color: white;
+    }
+  }
+}
+
+.select-signup-form {
+  font-family: 'Indie Flower', cursive;
+  background: @form-bg;
+  color: white;
+  padding: 3% 0;
+
+  .displayFlex(column, space-between);
+  align-items: center;
+
+  h3 {
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+    padding: 1% 0;
+    background: tint(@form-bg, 30%);
+  }
+
+  .form-select {
+    width: 100%;
+    text-align: center;
+    padding: 2% 0;
+
+    label {
+      font-size: 2rem;
+      padding: 0 2%;
+    }
+  }//closes form-select
+
+  .userInfo {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+
+    .userInfo-inputs{        
+        border-radius: 5px;
+        display: flex;
+        width: 100%;
+        margin: 1% 0;
+        
+        input {
+          padding: 2% 10%;
+          width: 100%;
+        }
+
+        input.special{
+          padding: 20%;
+        }
+
+      }
+  } // closes userInfo
+} //closes select-signup-form
